@@ -1,0 +1,14 @@
+augment.py
+MURA-v1.1.zip
+venv/
+.vscode/
+
+MURA-v1.1/train
+MURA-v1.1/valid
+MURA-v1.1/train_image_paths.csv
+MURA-v1.1/valid_image_paths.csv
+MURA-v1.1/train_labeled_studies.csv
+MURA-v1.1/valid_labeled_studies.csv
+
+.DS_Store
+MURA-v1.1/.DS_Store
