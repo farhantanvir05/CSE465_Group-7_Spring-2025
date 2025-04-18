@@ -28,4 +28,27 @@ To improve the diversity and robustness of the dataset, we applied various data 
 
 These augmentation techniques help the model learn to recognize bone fractures under different conditions, improving its overall accuracy and reliability.  
 
----
+##  Final Results
+
+### 📌 5-Fold Cross-Validation Results
+
+| Fold | Accuracy | Precision | Recall | F1 Score |
+|------|----------|-----------|--------|----------|
+| 1    | 0.81     | 0.83      | 0.70   | 0.76     |
+| 2    | 0.82     | 0.84      | 0.71   | 0.77     |
+| 3    | 0.83     | 0.85      | 0.72   | 0.78     |
+| 4    | 0.82     | 0.83      | 0.72   | 0.77     |
+| 5    | 0.83     | 0.84      | 0.73   | 0.78     |
+| **Avg** | **0.822** | **0.838** | **0.716** | **0.772** |
+
+
+
+## 📌 Final Test Set Result
+
+Evaluation on the holdout test set after training on the full training data:
+
+- **Accuracy**  : `0.8274`  
+- **Precision** : `0.8374`  
+- **Recall**    : `0.7175`  
+- **F1 Score**  : `0.7728`
+
