@@ -19,15 +19,12 @@ This project focuses on **bone fracture detection** using **X-ray images** and d
 ## 📌 Data Augmentation Methods Used
 To improve the diversity and robustness of the dataset, we applied various data augmentation techniques using Albumentations. These augmentations were applied to the training images to help the model generalize better and reduce overfitting. The following transformations were used:  
 
-- **Horizontal Flip (50%)** → Randomly flips images horizontally to introduce left-right variations.  
-- **Vertical Flip (50%)** → Randomly flips images vertically to simulate different perspectives.  
-- **Random Rotation (90°) (50%)** → Rotates images by 90 degrees randomly to add orientation diversity.  
-- **Shift-Scale-Rotate (50%)** →  
-  - Randomly shifts images up/down or left/right within 5% of their size.  
-  - Randomly scales images within a 5% range.  
-  - Rotates images within a ±15-degree range.  
-- **Gaussian Noise (30%)** → Adds random noise to images, making the model more robust against real-world imperfections.  
-- **Random Brightness & Contrast (30%)** → Randomly adjusts brightness and contrast to simulate lighting variations.  
+- **Resize**: All images were resized to 224×224 pixels.
+- **Random Horizontal Flip**: Images were flipped horizontally with a 50% probability to simulate left/right limb orientation.
+- **Random Rotation**: Applied a small random rotation (±10 degrees) to account for slight misalignment in X-ray captures.
+- **Normalization**: Images were normalized using the standard ImageNet mean and standard deviation:
+  - Mean: `[0.485, 0.456, 0.406]`
+  - Std: `[0.229, 0.224, 0.225]`
 
 These augmentation techniques help the model learn to recognize bone fractures under different conditions, improving its overall accuracy and reliability.  
 
