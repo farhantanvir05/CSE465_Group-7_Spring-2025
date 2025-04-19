@@ -28,9 +28,9 @@ To improve the diversity and robustness of the dataset, we applied various data 
 
 These augmentation techniques help the model learn to recognize bone fractures under different conditions, improving its overall accuracy and reliability.  
 
-##  Final Results
+## 📌 Final Results
 
-### 📌 5-Fold Cross-Validation Results
+###  5-Fold Cross-Validation Results
 
 | Fold | Accuracy | Precision | Recall | F1 Score |
 |------|----------|-----------|--------|----------|
@@ -43,7 +43,7 @@ These augmentation techniques help the model learn to recognize bone fractures u
 
 
 
-## 📌 Final Test Set Result
+###  Final Test Set Result
 
 Evaluation on the holdout test set after training on the full training data:
 
@@ -51,4 +51,13 @@ Evaluation on the holdout test set after training on the full training data:
 - **Precision** : `0.8374`  
 - **Recall**    : `0.7175`  
 - **F1 Score**  : `0.7728`
+
+## 📌 Final Project Plan
+
+###  Project Title
+**Cross Architectural Custom Hybrid Model Knowledge Distillation with Hyperparameter Tuning for Bone Fracture Detection**
+
+###  Objective
+To develop a high-performance bone fracture detection model using a custom hybrid architecture (CNN + Transformer), enhanced with knowledge distillation from a pretrained ResNet-50 teacher model, and fine-tuned through hyperparameter optimization.
+
 
