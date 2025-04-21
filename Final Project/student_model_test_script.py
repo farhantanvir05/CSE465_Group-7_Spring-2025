@@ -7,9 +7,9 @@ import os
 from glob import glob
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = CNNTransformerModel().to(device)
-model.load_state_dict(torch.load("best_model.pth"))
-model.eval()
+student_model = StudentCNN().to(device)
+student_model.load_state_dict(torch.load("/content/student_model.pth"))
+student_model.eval()
 
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
@@ -35,7 +35,7 @@ for patient_folder in sorted(os.listdir(base_dir)):
             image = transform(image).unsqueeze(0).to(device)
 
             with torch.no_grad():
-                output = model(image)
+                output = student_model(image)
                 prob = torch.sigmoid(output).item()
                 patient_preds.append(prob)
 
@@ -50,15 +50,15 @@ for patient_folder in sorted(os.listdir(base_dir)):
 from PIL import Image
 import torchvision.transforms as transforms
 
-image_path = "/content/image2_1047_png.rf.6d8753139f1f13e21f64d385b3b78865.jpg"
+image_path = "/content/MURA-v1.1/train/XR_ELBOW/patient00011/study1_negative/image1.png"
 image = Image.open(image_path).convert("RGB")
 transformed = val_transform(image).unsqueeze(0).to(device)
 
-model.load_state_dict(torch.load("best_model.pth"))
-model.eval()
+student_model.load_state_dict(torch.load("/content/student_model.pth"))
+student_model.eval()
 
 with torch.no_grad():
-    output = model(transformed)
+    output = student_model(transformed)
     prob = torch.sigmoid(output).item()
     pred = 1 if prob > 0.5 else 0
 
