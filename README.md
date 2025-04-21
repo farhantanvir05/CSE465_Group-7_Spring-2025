@@ -60,4 +60,9 @@ Evaluation on the holdout test set after training on the full training data:
 ###  Objective
 To develop a high-performance bone fracture detection model using a custom hybrid architecture (CNN + Transformer), enhanced with knowledge distillation from a pretrained ResNet-50 teacher model, and fine-tuned through hyperparameter optimization.
 
+## 📌 Dataset
+### The dataset used in this project is MURA (Musculoskeletal Radiographs), provided by Stanford ML Group.
+### You can access and download it from the official page: [MURA Dataset – Stanford ML Group](https://stanfordmlgroup.github.io/competitions/mura/)
+
+
 
